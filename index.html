@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>About Hsuan</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: #fdfdfd;
+      color: #333;
+    }
+
+    /* 上方 banner */
+    .top-banner {
+      height: 16px;
+      background-color: #ccc;
+    }
+
+    /* 導覽列 */
+    .navbar {
+  position: sticky;  /* 讓導航列固定 */
+  top: 0;            /* 設定它從頁面頂部開始 */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 24px;
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+  z-index: 10; /* 確保它顯示在其他內容之上 */
+}
+
+
+    .left-info {
+      display: flex;
+      align-items: center;
+    }
+    .left-image {
+  opacity: 1; /* 確保圖片完全顯示 */
+}
+
+
+    .avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: #ddd;
+      margin-right: 12px;
+    }
+
+    .site-title {
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .nav-links a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #0077cc;
+    }
+
+    /* 下方淡出 banner */
+    .bottom-banner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+      background: linear-gradient(to right, #ffffff, #f0f0f0);
+      opacity: 0;
+      animation: fadeIn 2s ease-in-out forwards;
+    }
+
+    .bottom-banner img {
+      width: 200px;
+      height: auto;
+      margin-right: 30px;
+      border-radius: 12px;
+      background-color: #fff; /* 全白圖 */
+    }
+
+    .bottom-banner .text {
+      font-size: 20px;
+      line-height: 1.6;
+      max-width: 500px;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+    @media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+  }
+
+  .nav-links a {
+    margin: 8px 12px 0 0;
+  }
+
+  .bottom-banner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .bottom-banner img {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .bottom-banner .text {
+    font-size: 18px;
+    max-width: 100%;
+    padding: 0 10px;
+  }
+}
+.bottom-banner {
+  position: relative;
+  overflow: hidden;
+}
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  opacity: 0.5; 
+}
+
+.banner-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px;
+}
+.text {
+    font-size: 16px; /* 比原本小 */
+    color: #ffffff; /* 白色 */
+    text-align: left; /* 置左 */
+    line-height: 1.6; /* 行距，讓段落更好看 */
+    max-width: 500px; /* 限制最大寬度，避免太散 */
+  }
+  .work-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px; /* 間距由 20px 改成 40px，變大！ */
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.work-box {
+  flex: 1 1 250px;
+  max-width: 250px;
+  aspect-ratio: 1 / 1;
+  background-color: #e0e0e0;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.work-box:hover {
+  transform: scale(1.05);
+  background-color: #f0f0f0; /* 滑鼠移上去，改成更淺的灰色 */
+}
+.work-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0;
+  overflow: hidden;
+}
+
+.work-box img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.work-title {
+  padding: 12px;
+  text-align: center;
+  font-size: 16px;
+}
+
+
+  </style>
+</head>
+<body>
+
+  <div class="top-banner"></div>
+
+  <div class="navbar">
+    <div class="left-info">
+      <div class="avatar"></div>
+      <div class="site-title">About Hsuan</div>
+    </div>
+    <!-- 修改導航列連結 -->
+<div class="nav-links">
+  <a href="#home">Home</a>
+  <a href="#work">work</a>
+  <a href="#tarot">tarot</a>
+  <a href="#about">about</a>
+</div>
+
+  </div>
+
+  <div class="bottom-banner">
+    <video autoplay muted loop playsinline class="bg-video">
+      <source src="767590507.354427.mp4" type="video/mp4">
+      你的瀏覽器不支援影片播放
+    </video>
+    <div class="left-image-container">
+      <img src="https://scontent-hkg4-1.xx.fbcdn.net/v/t39.30808-6/494511123_3155063981307583_1774621818106303119_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=110&ccb=1-7&_nc_sid=833d8c&_nc_ohc=E0fNFKkIlT4Q7kNvwGLzTVZ&_nc_oc=Adk3AO_Oc0GsYy3Mgcpt8u9UClIgkIaBv0iyXbKPT40kIClmeKrKNU_sDZwPbcztrWM&_nc_zt=23&_nc_ht=scontent-hkg4-1.xx&_nc_gid=7mc5LGiYqkAuuRGGt6BQgQ&oh=00_AfHdnGP0i5fS1bDlREPvZQkDwOVT3eNqkiTVf9-IDLSXnw&oe=681650B5" alt="Hsuan Image" class="left-image"> <!-- 新增圖片 -->
+    </div>
+    <div class="banner-content">
+     
+      <div class="text">
+        我是Hsuan。<br>
+        這裡記錄著我的作品、生活與思考。<br>
+        謝謝你的來訪！也歡迎預約塔羅占卜
+      </div>
+    </div>
+  </div>
+  <!-- 新增區塊內容，放在 </div> 的最後面（在 body 結尾前） -->
+<div id="home"></div> <!-- 空的，用來回到頂部 -->
+
+<div id="work" class="section">
+  <h2></h2>
+  <div class="work-grid">
+    <div class="work-box">
+      <img src="https://scontent-hkg1-2.xx.fbcdn.net/v/t39.30808-6/494092285_3155095981304383_9205931978190078125_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=833d8c&_nc_ohc=muX0JOzWMVIQ7kNvwFBJTpK&_nc_oc=Adk4ZHrRrpdDg-9SlzbV_U8S9cCFuFwA31tRltDce2hcAwYYI0_Ft2wiWvdqLOQ4MMM&_nc_zt=23&_nc_ht=scontent-hkg1-2.xx&_nc_gid=xmRpvcbNTXFImNfRJJgsyQ&oh=00_AfGw7Z408AxdWwcZhHeiVb25ssEKfAB3-7sB_EVT5CirmQ&oe=68165514" alt="Illustrations">
+      <div class="work-title">Illustrations</div>
+    </div>
+    <div class="work-box">
+      <img src="https://scontent-hkg1-2.xx.fbcdn.net/v/t39.30808-6/493949910_3155096031304378_1440187798461145625_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=833d8c&_nc_ohc=A43vCuRIUqgQ7kNvwGK1-6f&_nc_oc=Adkxh0RXenR3mp1co82MWXowBjo4eKDkipxoK30Y_vFMmziTZJq0fGGrfWuM9ibmWW0&_nc_zt=23&_nc_ht=scontent-hkg1-2.xx&_nc_gid=Aa0iJBs3-RSkeyA11doXVA&oh=00_AfFGPiw1kkqQPEXunSRqWoK9pDxIDzgkR3duSq4xkM-xjw&oe=68163BDF" alt="Vlog">
+      <div class="work-title">Vlog</div>
+    </div>
+    <div class="work-box">
+      <img src="https://scontent-hkg4-1.xx.fbcdn.net/v/t39.30808-6/494018959_3155095991304382_5249369374825486106_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=833d8c&_nc_ohc=sm1zoKWvZVsQ7kNvwF400UW&_nc_oc=AdmNNEqwkGqBV97u881iMxm-C5t1oG1ybNqbRmOsOi3w5w2GsJHtZndkrYfFSOwgDxQ&_nc_zt=23&_nc_ht=scontent-hkg4-1.xx&_nc_gid=FetWwlpao0CKhh5wfKxfEw&oh=00_AfHDFGZTKGKoIFXewTVThm5XuqF1KwGzQAkXWtbrtNwbxQ&oe=68166A3A" alt="Web Design">
+      <div class="work-title">Web Design</div>
+    </div>
+  </div>
+</div>
+<div id="tarot" class="section">
+  <h2></h2>
+  <p></p>
+  <div class="work-grid">
+    <div class="work-box">
+      <img src="https://scontent-hkg1-2.xx.fbcdn.net/v/t39.30808-6/493942468_3155088324638482_4575863919455074009_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=833d8c&_nc_ohc=5NDGkVWTIB0Q7kNvwF5ZZjJ&_nc_oc=AdlJFD4NQRoKSbCpAA2QXjw22lDCNP6phnJKTCTHQmZuGj0aNEH43suik6cvMQWMjNY&_nc_zt=23&_nc_ht=scontent-hkg1-2.xx&_nc_gid=UlCYWevFTAdrOLo-4x0UdQ&oh=00_AfHTsKZyYYs9t8ITwv7I0JhFqj8Ozi7RZlI4MNrJey0P8g&oe=68163EF4" alt="一對一占卜">
+      <div class="work-title">一對一占卜</div>
+    </div>
+    <div class="work-box">
+      <img src="https://scontent-hkg1-1.xx.fbcdn.net/v/t39.30808-6/493993763_3155088667971781_802298382286193073_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=109&ccb=1-7&_nc_sid=833d8c&_nc_ohc=YcPty7epJYQQ7kNvwEXNtki&_nc_oc=Adkh5g6l1hmrIdP5F5ckDeorkG6uZ8IrLrQrm91YXjCAot2CHofwvTP5SWwPIgXLWck&_nc_zt=23&_nc_ht=scontent-hkg1-1.xx&_nc_gid=9r9Tb03hGHQJdCX3d0R9Jw&oh=00_AfGSAzlBES4bLvPLnszp4e7ynnMrQVXaDqvbMA4QvoH6eg&oe=681647CF" alt="線上預約">
+      <div class="work-title">線上預約</div>
+    </div>
+    <div class="work-box">
+      <img src="https://scontent-hkg4-2.xx.fbcdn.net/v/t39.30808-6/494147909_3155088437971804_4097751413619029021_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=833d8c&_nc_ohc=hG_FQz9RF2gQ7kNvwGmmX3P&_nc_oc=AdlkPZ02G-4N89pNGMNB3W3Aw8c9QGojroNNd6BkNABUtftsTrpNkmuwzNj4kf4EWa0&_nc_zt=23&_nc_ht=scontent-hkg4-2.xx&_nc_gid=zlEqXEZjRrMnN9itTrlszQ&oh=00_AfE8L3r6k41n9XmIC-qmT43aFz6au6kebIm8QF5hPG3rQA&oe=681634A4" alt="塔羅教學">
+      <div class="work-title">塔羅教學</div>
+    </div>
+  </div>
+</div>
+
+
+
+  
+
+</body>
+</html>
